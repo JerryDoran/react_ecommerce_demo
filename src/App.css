@@ -5,11 +5,12 @@
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
   --mainYellow: #ffa400;
+  --lightGrey: #eee;
 }
 
 body {
   font-family: 'Roboto', sans-serif !important;
-  background: var(--mainwhite) !important;
+  background: var(--lightGrey) !important;
   color: var(--mainDark) !important;
 }
 

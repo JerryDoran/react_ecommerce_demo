@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import { Title } from './Title';
-import { storeProducts } from '../data';
 import { ProductContextConsumer } from '../context/ProductContext';
-import { createGlobalStyle } from 'styled-components';
 
 export default class ProductList extends Component {
   render() {
@@ -16,7 +14,9 @@ export default class ProductList extends Component {
             <div className='row'>
               <ProductContextConsumer>
                 {(value) => {
-                  console.log(value);
+                  return value.products.map((product) => {
+                    return <Product key={product.id} product={product} />;
+                  });
                 }}
               </ProductContextConsumer>
             </div>

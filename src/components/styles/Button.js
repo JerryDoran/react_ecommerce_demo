@@ -4,8 +4,10 @@ export const ButtonContainer = styled.button`
   text-transform: capitalize;
   font-size: 1rem;
   background: transparent;
-  border: 0.08rem solid var(--mainWhite);
-  color: var(--mainWhite);
+  border: 0.08rem solid var(--lightBlue);
+  border-color: ${(props) =>
+    props.cart ? 'var(--mainYellow)' : 'var(--lightBlue)'};
+  color: ${(props) => (props.cart ? 'var(--mainYellow)' : 'var(--lightBlue)')};
   border-radius: 0.3rem;
   padding: 0.2rem 0.5rem;
   cursor: pointer;
@@ -14,7 +16,8 @@ export const ButtonContainer = styled.button`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background: #777;
+    background: ${(props) => (props.cart ? 'var(--mainYellow)' : '#777')};
+    color: var(--mainWhite);
   }
 
   &:focus {
