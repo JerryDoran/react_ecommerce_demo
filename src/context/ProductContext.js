@@ -10,6 +10,9 @@ class ProductContextProvider extends Component {
     cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
+    cartSubTotal: 0,
+    cartTax: 0,
+    cartTotal: 0,
   };
   componentDidMount() {
     this.setProducts();
@@ -69,6 +72,22 @@ class ProductContextProvider extends Component {
     });
   };
 
+  increment = (id) => {
+    console.log('this is increment method');
+  };
+
+  decrement = (id) => {
+    console.log('this is decrement method');
+  };
+
+  removeItem = (id) => {
+    console.log('remove item method');
+  };
+
+  clearCart = () => {
+    console.log('clear cart method');
+  };
+
   render() {
     return (
       <ProductContext.Provider
@@ -78,6 +97,10 @@ class ProductContextProvider extends Component {
           addToCart: this.addToCart,
           openModal: this.openModal,
           closeModal: this.closeModal,
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart,
         }}
       >
         {this.props.children}

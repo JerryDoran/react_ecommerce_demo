@@ -11,3 +11,4 @@ export const Title = ({ name, title }) => {
     </div>
   );
 };
+
