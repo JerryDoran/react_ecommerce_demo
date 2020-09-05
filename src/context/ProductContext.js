@@ -7,7 +7,7 @@ class ProductContextProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: storeProducts,
+    cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
     cartSubTotal: 0,
@@ -87,6 +87,10 @@ class ProductContextProvider extends Component {
   clearCart = () => {
     console.log('clear cart method');
   };
+
+  addTotals = ()=>{
+    let subTotal = 0;
+  }
 
   render() {
     return (
